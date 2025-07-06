@@ -25,10 +25,6 @@ A responsive landing page for MedWrite.ai
 
 1. Clone the repository
 2. Open `index.html` in your browser
-3. For local development, use a local server:
-   ```bash
-   python -m http.server 8000
-   ```
 
 ## Dependencies
 
