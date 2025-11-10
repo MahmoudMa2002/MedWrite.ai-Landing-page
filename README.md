@@ -1,4 +1,4 @@
-# MedWrite.ai Landing Page
+# Landing Page Design
 
 A generic landing page design using HTML/CSS/JavaScript
 
