@@ -1,10 +1,10 @@
 # MedWrite.ai Landing Page
 
-A responsive landing page for MedWrite.ai
+A generic landing page design using HTML/CSS/JavaScript
 
 **Live Demo**: [Visit MedWrite on Vercel](https://med-write-ai-landing-page.vercel.app/)
 
-![Medwrite UI Preview](https://res.cloudinary.com/dqcv0p9p6/image/upload/v1751803636/Screenshot_1_olfohg.png)
+![Medwrite UI Preview](/Demo.png)
 
 ## Features
 
@@ -12,7 +12,7 @@ A responsive landing page for MedWrite.ai
 - Smooth scrolling and animations
 - Video demo integration
 - Team and partner sections
-- Modern healthcare-focused design
+- Modern design
 
 ## Files
 
