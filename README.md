@@ -2,7 +2,7 @@
 
 A generic landing page design using HTML/CSS/JavaScript
 
-**Live Demo**: [Visit MedWrite on Vercel](https://med-write-ai-landing-page.vercel.app/)
+**Live Demo**: [Visit the page on Vercel](https://med-write-ai-landing-page.vercel.app/)
 
 ![Medwrite UI Preview](/Demo.png)
 
