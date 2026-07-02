@@ -155,6 +155,7 @@ nav.scrolled {
 .video-demo,
 .features,
 .benefits,
+.testimonials,
 .team,
 .partners {
     padding: 5rem 0;
@@ -228,7 +229,7 @@ nav.scrolled {
 }
 
 .feature-card {
-    background-color: #f4f4f4;
+    background-color: #ffff;
     border: 1px solid rgb(209, 209, 209);
     padding: 2rem;
     border-radius: 15px;
@@ -274,7 +275,7 @@ nav.scrolled {
 .benefit-item {
     text-align: center;
     padding: 2rem;
-    background: #f4f4f4;
+    background: #ffffff;
     border: 1px solid rgb(209, 209, 209);
     border-radius: 15px;
     transition: all 0.2s ease;
@@ -301,6 +302,116 @@ nav.scrolled {
     color: #666;
 }
 
+/* Testimonials Carousel */
+.testimonials-carousel {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.testimonials-track-wrapper {
+    overflow: hidden;
+    flex: 1;
+}
+
+.testimonials-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-item {
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-card {
+    text-align: center;
+    padding: 2.5rem;
+    background: #ffffff;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    background: #e6f4f4;
+}
+
+.testimonial-quote-icon {
+    font-size: 1.5rem;
+    color: #38B6B2;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-name {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.testimonial-role {
+    color: #38B6B2;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.carousel-arrow {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid rgb(209, 209, 209);
+    background: #ffffff;
+    color: #38B6B2;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background: #38B6B2;
+    color: #ffffff;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(209, 209, 209);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: #38B6B2;
+    width: 26px;
+    border-radius: 5px;
+}
+
 /* Partners */
 .partners-grid {
     display: grid;
@@ -313,7 +424,7 @@ nav.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f4f4f4;
+    background: #ffffff;
     border: 1px solid rgb(209, 209, 209);
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -352,7 +463,7 @@ nav.scrolled {
 .team-member {
     text-align: center;
     padding: 2rem;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     border: 1px solid rgb(209, 209, 209);
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -443,5 +554,19 @@ footer {
     .benefits-grid,
     .team-grid {
         grid-template-columns: 1fr;
+    }
+
+    .testimonials-carousel {
+        gap: 0.75rem;
+    }
+
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .testimonial-item {
+        padding: 1.5rem;
     }
 }
