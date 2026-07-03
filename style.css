@@ -79,6 +79,80 @@ nav.scrolled {
     width: 100%;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.4rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #38B6B2;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #fdfdfd;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-menu.active {
+    max-height: 500px;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav-links li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-links a {
+    display: block;
+    padding: 1rem 2rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-links a:hover {
+    background: #e6f4f4;
+    color: #38B6B2;
+    padding-left: 2.5rem;
+}
+
+.mobile-nav-links li:last-child {
+    border-bottom: none;
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -194,7 +268,8 @@ nav.scrolled {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
     border-radius: 20px;
@@ -340,7 +415,7 @@ nav.scrolled {
 }
 
 .testimonial-quote-icon {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     color: #38B6B2;
     margin-bottom: 1rem;
 }
@@ -526,6 +601,18 @@ footer {
         display: none;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .logo {
+    font-size: 1.5rem;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -542,6 +629,11 @@ footer {
     .benefits-grid,
     .team-grid {
         grid-template-columns: 1fr;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+        gap: 0.5rem;
     }
 
     .testimonials-carousel {

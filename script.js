@@ -1,3 +1,28 @@
+// Mobile hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    });
+});
+
+// Close mobile menu on scroll
+window.addEventListener('scroll', () => {
+    if (hamburger.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    }
+});
+
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
