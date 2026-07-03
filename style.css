@@ -236,7 +236,11 @@ nav.scrolled {
     transition: all 0.3s ease;
 }
 
-.feature-card:hover {
+.feature-card:hover,
+.benefit-item:hover,
+.testimonial-card:hover,
+.partner-item:hover,
+.team-member:hover {
     background: #e6f4f4;
 }
 
@@ -279,10 +283,6 @@ nav.scrolled {
     border: 1px solid rgb(209, 209, 209);
     border-radius: 15px;
     transition: all 0.2s ease;
-}
-
-.benefit-item:hover {
-    background: #e6f4f4;
 }
 
 .benefit-number {
@@ -337,10 +337,6 @@ nav.scrolled {
     max-width: 800px;
     width: 100%;
     transition: all 0.3s ease;
-}
-
-.testimonial-card:hover {
-    background: #e6f4f4;
 }
 
 .testimonial-quote-icon {
@@ -432,10 +428,6 @@ nav.scrolled {
     min-height: 120px;
 }
 
-.partner-item:hover {
-    background: #e6f4f4;
-}
-
 .partner-logo {
     display: flex;
     align-items: center;
@@ -467,10 +459,6 @@ nav.scrolled {
     border: 1px solid rgb(209, 209, 209);
     border-radius: 15px;
     transition: all 0.3s ease;
-}
-
-.team-member:hover {
-    background: #e6f4f4;
 }
 
 .team-avatar img {
@@ -561,9 +549,11 @@ footer {
     }
 
     .carousel-arrow {
-        width: 36px;
-        height: 36px;
-        font-size: 0.9rem;
+        display: none;
+    }
+
+    .testimonials-track-wrapper {
+        touch-action: pan-y;
     }
 
     .testimonial-item {

@@ -76,5 +76,23 @@ if (track) {
     carousel.addEventListener('mouseleave', () => {
         autoplay = setInterval(() => goToSlide(currentIndex + 1), 6000);
     });
+
+    // Swipe support for touch screens
+    const wrapper = document.querySelector('.testimonials-track-wrapper');
+    let touchStartX = 0;
+
+    wrapper.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        clearInterval(autoplay);
+    }, { passive: true });
+
+    wrapper.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+            goToSlide(currentIndex + (diff > 0 ? 1 : -1));
+        }
+        autoplay = setInterval(() => goToSlide(currentIndex + 1), 6000);
+    });
 }
 
